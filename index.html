@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Pernikahan Imam & Nagita</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Imperial Script', cursive;
+        background-color: #000014;
+      }
+      .quran {
+        font-family: 'Raleway', sans-serif;
+        font-size: 1em;
+        margin: 10px 0;
+        color: #dbaa07;
+      }
+      .hero {
+        min-height: 100vh;
+        background: url('https://i.ibb.co/0qK0H7L/floral-bg.jpg') center/cover no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #dbaa07;
+        text-shadow: 1px 1px 5px #000;
+        padding: 20px;
+        text-align: center;
+      }
+      .hero h1 {
+        font-family: 'Imperial Script', cursive;
+        font-size: 3em;
+        margin: 0;
+        color: #dbaa07;
+      }
+      .hero p {
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.2em;
+        margin: 10px 0;
+      }
+      .hero button {
+        padding: 12px 24px;
+        font-size: 1em;
+        border: none;
+        border-radius: 8px;
+        background: #dbaa07;
+        color: #000014;
+        cursor: pointer;
+      }
+
+      section {
+        padding: 40px 20px;
+        text-align: center;
+        color: #dbaa07;
+        font-family: 'Raleway', sans-serif;
+        font-style: Light;
+      }
+      .title {
+        font-family: 'Imperial Script', cursive;
+        font-size: 2em;
+        margin-bottom: 10px;
+        color: #dbaa07;
+      }
+      .subtitle {
+        color: #777;
+        margin-bottom: 20px;
+      }
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .gallery img {
+        width: 100%;
+        max-width: 200px;
+        margin: 10px;
+        border-radius: 8px;
+      }
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 12px;
+        max-width: 800px;
+        margin: auto;
+        padding: 10px 0;
+      }
+
+      form textarea {
+        grid-column: span 2;
+        min-height: 80px;
+      }
+
+      form input,
+      form textarea {
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 1em;
+      }
+
+      form button {
+        display: block;
+        margin: 15px auto 0;
+        padding: 10px 24px;
+        font-size: 1em;
+        background-color: #25d366;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .comments-container {
+        max-width: 800px;
+        margin: 30px auto 0;
+        padding: 10px;
+      }
+
+      .comment {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 12px;
+        color: white;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .share-buttons a {
+        margin: 10px;
+        font-size: 2em;
+        color: #d3c725;
+        text-decoration: none;
+      }
+      .music-control {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: white;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        cursor: pointer;
+      }
+
+      .countdown-wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin: 30px 0;
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      .countdown-box {
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid #dbaa07;
+        border-radius: 15px;
+        padding: 15px 20px;
+        text-align: center;
+        color: #dbaa07;
+        font-weight: bold;
+        box-shadow: 0 0 10px #ffd70088;
+        animation: zoomIn 1s ease-in-out;
+        min-width: 70px;
+      }
+
+      .countdown-box .number {
+        font-size: 2em;
+      }
+
+      .countdown-box .label {
+        font-size: 0.9em;
+        margin-top: 5px;
+      }
+      .foto {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+        text-align: center;
+      }
+      .profile-img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-color: gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: white;
+        box-shadow: 0 0 10px #00000033;
+        transition: transform 0.4s;
+        flex-shrink: 0;
+      }
+
+      .profile-img:hover {
+        transform: scale(1.05);
+      }
+      .Nama1 {
+        font-family: 'Imperial Script', cursive;
+        font-size: 2em;
+        margin-bottom: 10px;
+        color: #dbaa07;
+        height: 10px;
+      }
+      .Nama2 {
+        font-family: 'Imperial Script', cursive;
+        font-size: 2em;
+        margin-bottom: 10px;
+        color: #dbaa07;
+        height: 10px;
+      }
+
+      .Nama3 {
+        font-family: 'Imperial Script', cursive;
+        font-size: 3em;
+        margin-bottom: 10px;
+        color: #dbaa07;
+        height: 10px;
+        align-items: center;
+        justify-content: center;
+      }
+      .footer {
+        font-family: 'Raleway', sans-serif;
+        text-align: center;
+        padding: 100px;
+        background: #000008;
+        color: #dbaa07;
+      }
+      .floating-navbar {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #dbaa07;
+        padding: 12px 18px;
+        border-radius: 50px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        display: flex;
+        gap: 20px;
+        z-index: 9999;
+        backdrop-filter: blur(8px);
+      }
+
+      .floating-navbar a {
+        color: #000014; /* warna emas klasik */
+        font-size: 1.4em;
+        text-decoration: none;
+        transition: transform 0.2s ease, color 0.2s ease;
+      }
+
+      .floating-navbar a:hover {
+        transform: scale(1.2);
+        color: #b18b2d;
+      }
+
+      /* Responsive hide on very small screens if needed */
+      @media (max-width: 360px) {
+        .floating-navbar {
+          flex-direction: column;
+          padding: 10px;
+          gap: 12px;
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes zoomIn {
+        from {
+          transform: scale(0.8);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .hero h1 {
+          font-size: 2em;
+        }
+        .hero p {
+          font-size: 1em;
+        }
+        .title {
+          font-size: 1.5em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      <p>Undangan dari</p>
+      <h1>Imam & Nagita</h1>
+      <p>Kepada Yth. <span id="guestName">Tamu Undangan</span></p>
+      <button onclick="openInvitation()">Buka Undangan</button>
+    </section>
+
+    <main id="mainContent" style="display: none">
+      <section class="quran">
+        “Dan Diantara Tanda-tanda (Kebesaran) -Nya Ialah Dia Menciptakan Pasangan-pasangan Untukmu Dari Jenismu Sendiri, Agar Kamu Cenderung Dan Merasa Teteram Kepadanya, Dan Dia Menjadikan Diantaramu Rasa Kasih Dan Sayang. Sungguh, Pada
+        Yang Demuikian Itu Benar-benar Terdapat Tanda-tanda (Kebesaran Allah) Bagi Kaum Yang Berfikir” { Q.S : Ar-Rum (30) : 20 }
+      </section>
+      <section id="beranda">
+        <div class="title">Assalamu'alaikum Warahmatullahi Wabarakatuh</div>
+        <p>Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i dalam acara pernikahan kami.</p>
+      </section>
+      <section class="Nama1"><p>Imam sym</p></section>
+      <section class="foto">
+        <img class="profile-img" src="img/01.png" alt="Foto Profil" />
+      </section>
+      <section class="Nama3">&</section>
+      <section class="Nama2"><p>Nagita selsin</p></section>
+      <section class="foto">
+        <img class="profile-img" src="img/01.png" alt="Foto Profil" />
+      </section>
+
+      <!-- Countdown Section -->
+      <section id="acara">
+        <p>Dilaksanakan Pada Hari Sabtu, 26 Oktober 2025</p>
+        <div class="countdown-wrapper" id="countdownTimer">
+          <div class="countdown-box">
+            <div class="number" id="days">00</div>
+            <div class="label">Hari</div>
+          </div>
+          <div class="countdown-box">
+            <div class="number" id="hours">00</div>
+            <div class="label">Jam</div>
+          </div>
+          <div class="countdown-box">
+            <div class="number" id="minutes">00</div>
+            <div class="label">Menit</div>
+          </div>
+          <div class="countdown-box">
+            <div class="number" id="seconds">00</div>
+            <div class="label">Detik</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="title">Detail Acara</div>
+        <p class="subtitle">Akad Nikah: 08.00 WIB | Resepsi: 11.00 WIB</p>
+        <p>Gedung Graha Saba Buana<br />Jl. Letjen Suprapto No.80, Surakarta</p>
+        <iframe src="https://maps.google.com/maps?q=Graha%20Saba%20Buana&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+      </section>
+
+      <section id="galeri">
+        <div class="title">Galeri</div>
+        <div class="gallery">
+          <img src="img/01.png" />
+          <img src="img/01.png" />
+          <img src="img/01.png" />
+        </div>
+      </section>
+      <section>
+        <div class="title"></div>
+        <div class="share-buttons">Tiada Yang Dapat Kami Ungkapkan Selain Rasa Terimakasih Dari Hati Yang Tulus Apabila Bapak/ Ibu/ Saudara/i Berkenan Hadir Untuk Memberikan Do’a Restu Kepada Kami</div>
+      </section>
+      <section id="weddingGift" style="text-align: center; padding: 40px 20px; background-color: #f9f9f9; color: #333">
+        <h2 style="font-size: 2em; margin-bottom: 10px">Wedding Gift</h2>
+        <p style="margin-bottom: 20px">Jika Bapak/Ibu/Saudara/i ingin mengirimkan hadiah sebagai tanda kasih, berikut informasi yang bisa digunakan:</p>
+
+        <div style="background: white; border-radius: 10px; display: inline-block; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)">
+          <h3 style="margin: 0">Transfer Bank</h3>
+          <p style="margin: 5px 0"><strong>Bank BCA</strong></p>
+          <p style="margin: 5px 0">No. Rekening: <strong>1234567890</strong></p>
+          <p style="margin: 5px 0">a.n. Imam & Nagita</p>
+          <button onclick="copyToClipboard('1234567890')" style="margin-top: 10px; padding: 10px 20px; border: none; border-radius: 5px; background-color: #ffd700; color: #000; cursor: pointer">Salin No. Rekening</button>
+        </div>
+
+        <div style="margin-top: 30px">
+          <h3>QRIS</h3>
+          <img src="https://i.ibb.co/mNPNV95/qris-sample.png" alt="QRIS Wedding Gift" style="width: 200px; border-radius: 10px" />
+        </div>
+      </section>
+      <section id="rsvp">
+        <div class="title">Ucapan & Doa</div>
+        <form id="commentForm">
+          <div class="form-grid">
+            <input type="text" id="name" placeholder="Nama Anda" required />
+            <input type="number" id="guestCount" placeholder="Jumlah Tamu" required />
+            <textarea id="message" placeholder="Tulis ucapan atau doa..." required></textarea>
+          </div>
+          <button type="submit">Kirim Ucapan</button>
+        </form>
+
+        <div id="commentsContainer" class="comments-container"></div>
+      </section>
+    </main>
+
+    <audio id="bgMusic" loop>
+      <source src="musik/Dj Komang Rimex  Dj People Libianca Slow.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div class="music-control" onclick="toggleMusic()">
+      <i id="musicIcon" class="fas fa-pause"></i>
+    </div>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const guestName = params.get('to') || 'Tamu Undangan';
+      document.getElementById('guestName').innerText = decodeURIComponent(guestName);
+
+      const bgMusic = document.getElementById('bgMusic');
+      const musicIcon = document.getElementById('musicIcon');
+
+      function openInvitation() {
+        document.querySelector('.hero').style.display = 'none';
+        document.getElementById('mainContent').style.display = 'block';
+        bgMusic.play();
+        startCountdown(); // Mulai countdown saat undangan dibuka
+      }
+
+      function toggleMusic() {
+        if (bgMusic.paused) {
+          bgMusic.play();
+          musicIcon.classList.remove('fa-play');
+          musicIcon.classList.add('fa-pause');
+        } else {
+          bgMusic.pause();
+          musicIcon.classList.remove('fa-pause');
+          musicIcon.classList.add('fa-play');
+        }
+      }
+
+      function startCountdown() {
+        const countdownDate = new Date('2025-04-23T08:00:00+07:00').getTime();
+        const updateCountdown = () => {
+          const now = new Date().getTime();
+          const distance = countdownDate - now;
+          if (distance < 0) {
+            document.getElementById('countdownTimer').innerHTML = "<p style='color:white;'>Hari Bahagia Telah Tiba!</p>";
+            return;
+          }
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          document.getElementById('days').textContent = String(days).padStart(2, '0');
+          document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+          document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+          document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        };
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+      }
+
+      document.getElementById('waShare').href = `https://wa.me/?text=${encodeURIComponent('Saya mengundang Anda ke pernikahan Imam & Nagita. Buka undangan di: ' + window.location.href)}`;
+    </script>
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
+    <script>
+      // Firebase config kamu di sini
+      const firebaseConfig = {
+        apiKey: 'AIzaSyDYx_PEt42X_d-yNFjXNK3i5vn0J5xGh2g',
+        authDomain: 'undangankomen.firebaseapp.com',
+        projectId: 'undangankomen',
+        storageBucket: 'undangankomen.firebasestorage.app',
+        messagingSenderId: '476066660008',
+        appId: '1:476066660008:web:f4346a37cf84d2c90f0c9d',
+        measurementId: 'G-LDNRTLLPNG',
+      };
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.database();
+
+      document.getElementById('commentForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const guestCount = document.getElementById('guestCount').value;
+        const message = document.getElementById('message').value;
+
+        db.ref('ucapan').push({
+          name: name,
+          guestCount: guestCount,
+          message: message,
+          timestamp: Date.now(),
+        });
+
+        // Reset form
+        document.getElementById('commentForm').reset();
+      });
+
+      // Load comments
+      const commentsContainer = document.getElementById('commentsContainer');
+
+      db.ref('ucapan').on('child_added', function (snapshot) {
+        const data = snapshot.val();
+        const comment = document.createElement('div');
+        comment.className = 'comment';
+        comment.innerHTML = `<strong>${data.name}</strong> (${data.guestCount} tamu)<br><p>${data.message}</p>`;
+        commentsContainer.prepend(comment);
+      });
+    </script>
+    <script>
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+          alert('Nomor rekening berhasil disalin!');
+        });
+      }
+    </script>
+
+    <footer class="footer">copyright by isagii wedding</footer>
+    <div class="floating-navbar">
+      <a href="#beranda" title="Beranda"><i class="fas fa-home"></i></a>
+      <a href="#acara" title="Acara"><i class="fas fa-calendar-alt"></i></a>
+      <a href="#galeri" title="Galeri"><i class="fas fa-image"></i></a>
+      <a href="#rsvp" title="RSVP"><i class="fas fa-envelope"></i></a>
+    </div>
+  </body>
+</html>
