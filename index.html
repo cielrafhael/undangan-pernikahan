@@ -11,6 +11,11 @@
         margin: 0;
         font-family: 'Imperial Script', cursive;
         background-color: #000014;
+        background-image: url('img/03.png');
+        background-repeat: repeat; /* atau no-repeat untuk satu ornamen */
+        background-position: center;
+        background-size: cover; /* atau contain, sesuai gaya */
+        background-attachment: fixed; /* opsional, biar latarnya nggak ikut scroll */
       }
       .quran {
         font-family: 'Raleway', sans-serif;
@@ -240,7 +245,7 @@
       .footer {
         font-family: 'Raleway', sans-serif;
         text-align: center;
-        padding: 100px;
+        padding: 200px;
         background: #000008;
         color: #dbaa07;
       }
@@ -273,11 +278,11 @@
 
       /* Responsive hide on very small screens if needed */
       @media (max-width: 360px) {
-  .floating-navbar {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+        .floating-navbar {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
       }
       @keyframes fadeIn {
         from {
@@ -313,66 +318,66 @@
         }
       }
       @media (max-width: 768px) {
-  .profile-img {
-    width: 200px;
-    height: 200px;
-  }
+        .profile-img {
+          width: 200px;
+          height: 200px;
+        }
 
-  .Nama1,
-  .Nama2,
-  .Nama3 {
-    font-size: 1.8em;
-  }
+        .Nama1,
+        .Nama2,
+        .Nama3 {
+          font-size: 1.8em;
+        }
 
-  .countdown-box {
-    min-width: 60px;
-    padding: 10px 12px;
-  }
+        .countdown-box {
+          min-width: 60px;
+          padding: 10px 12px;
+        }
 
-  iframe {
-    width: 100%;
-    height: 250px;
-    border: none;
-  }
+        iframe {
+          width: 100%;
+          height: 250px;
+          border: none;
+        }
 
-  .gallery img {
-    max-width: 150px;
-  }
-}
+        .gallery img {
+          max-width: 150px;
+        }
+      }
 
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 1.8em;
-  }
+      @media (max-width: 480px) {
+        .hero h1 {
+          font-size: 1.8em;
+        }
 
-  .hero p,
-  .title,
-  .subtitle {
-    font-size: 1em;
-  }
+        .hero p,
+        .title,
+        .subtitle {
+          font-size: 1em;
+        }
 
-  .form-grid {
-    grid-template-columns: 1fr !important;
-  }
+        .form-grid {
+          grid-template-columns: 1fr !important;
+        }
 
-  form textarea {
-    grid-column: span 1;
-  }
+        form textarea {
+          grid-column: span 1;
+        }
 
-  .floating-navbar {
-    flex-direction: column;
-    padding: 8px 12px;
-    gap: 8px;
-  }
+        .floating-navbar {
+          flex-direction: row;
+          padding: 8px 12px;
+          gap: 8px;
+        }
 
-  .share-buttons {
-    flex-direction: column;
-  }
+        .share-buttons {
+          flex-direction: column;
+        }
 
-  .footer {
-    padding: 40px 20px;
-  }
-}
+        .footer {
+          padding: 100px 20px;
+        }
+      }
     </style>
   </head>
   <body>
